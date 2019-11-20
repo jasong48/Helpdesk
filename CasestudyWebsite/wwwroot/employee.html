@@ -1,0 +1,129 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<style>
+		img {
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+			margin-top: 35px;
+			margin-bottom: 1px;
+		}
+		div.error {
+    color: white;
+    background-color: #fff717;
+    padding: .25em .4em;
+    font-size: 75%;
+    font-weight: 700;
+    line-height: 1;
+    left: 200px;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: .25rem;
+}
+	</style>
+
+	<title>Case #1 - Employees </title>
+	<meta charset="utf-8" />
+	<link href="/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+	<link rel="icon" href="data:;base64,iVBORw0KGgo=">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+	<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+		<a class="navbar-brand" href="#">Case#1</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarContent">
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item">
+					<a class="nav-link" href="home.html">Home</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link active" href="employee.html">Employees</a>
+				</li>
+			</ul>
+			<div class="form-group mt-2 mr-2">
+				<input type="text" class="form-control" id="srch" placeholder="Search">
+			</div>
+		</div>
+		<a class="navbar-brand navbar-right text-white">V1.0</a>
+	</nav>
+
+	<img src="img/myimage.png" alt="Helpdesk">
+	<p style="text-align:center;">V1.0</p>
+
+	<div class="justify-content-center align-items-center row m-1">
+		<div class="col-12 text-center p-3"><h2>Current Employees</h2></div>
+		<div class="list-group col-10" id="employeeList">
+		</div>
+	</div>
+	<form id="EmployeeModalForm" name="EmployeeModalForm" method="post" action="">
+		<div class="modal fade text-center mr-3" data-backdrop="static" id="theModal">
+			<div class="modal-dialog modal-lg">
+				<div class="modal-content">
+					<div class="modal-header d-block">
+						<button type="button" class="close float-right" data-dismiss="modal" aria-label="close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+						<h1 class="modal-title text-center">Employee Info</h1>
+					</div>
+					<div class="modal-body">
+						<div class="mx-4 my-4">
+							<div class="card">
+								<div class="card-header text-center">
+									Employee Information
+								</div>
+								<div class="card-body">
+									<div class="row">
+										<div class="col-4">Title:</div>
+										<div class="col-8"><input type="text" placeholder="enter title" id="TextBoxTitle" name="TextBoxTitle" class="form-control" /></div>
+									</div>
+									<div class="row">
+										<div class="col-4">First:</div>
+										<div class="col-8"><input type="text" placeholder="enter firstname" id="TextBoxFirstname" name="TextBoxFirstname" class="form-control" /></div>
+									</div>
+									<div class="row">
+										<div class="col-4">Surname:</div>
+										<div class="col-8"><input type="text" placeholder="enter lastname" id="TextBoxLastname" name="TextBoxLastname" class="form-control" /></div>
+									</div>
+									<div class="row">
+										<div class="col-4">Phone#:</div>
+										<div class="col-8"><input type="text" placeholder="enter phone#" id="TextBoxPhoneno" name="TextBoxPhoneno" class="form-control" /></div>
+									</div>
+									<div class="row">
+										<div class="col-4">Email:</div>
+										<div class="col-8"><input type="text" placeholder="enter email address" id="TextBoxEmail" name="TextBoxEmail" class="form-control" /></div>
+									</div>
+									<div class="row">
+										<div class="col-4">Dept:</div>
+										<div class="col-8"><select id="ddlDivs" name="ddlDivs" class="form-control"></select></div>
+									</div>
+									<div class="row">
+										<div class="col-4">Picture:</div>
+										<div class="col-8" id="ImageHolder"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="card-footer text-center">
+							<input type="file" id="uploader" class="border float-left col-9 col-sm-4" />
+							<input type="button" class="btn btn-secondary" value="Update" id="actionbutton" />
+							<input type="button" class="btn btn-secondary" data-toggle="confirmation" id="deletebutton" data-placement="right" value="delete" />
+							<div id="modalstatus" class="text-left mt-3 mb-2"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		</form>
+		<script src="lib/jquery/dist/jquery.min.js"></script>
+		<script src="lib/jquery-validation/dist/jquery.validate.min.js"></script>
+		<script src="js/popper.min.js"></script>
+		<script src="lib/bootstrap/dist/js/bootstrap.min.js"></script>
+		<script src="js/bootstrap-confirmation.min.js"></script>
+		<script src="js/employeelist.js"></script>
+</body>
+</html>
+

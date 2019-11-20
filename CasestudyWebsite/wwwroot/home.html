@@ -1,0 +1,88 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+
+	<style>
+		img {
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+			margin-top: 200px;
+		}
+	</style>
+
+	<title>Case#1</title>
+	<meta charset="utf-8" />
+	<link href="/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+	<link rel="icon" href="data:;base64,iVBORw0KGgo">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+	<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+		<a class="navbar-brand" href="#">Case#1</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarContent">
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item active">
+					<a class="nav-link" href="home.html">Home<span class="sr-only">(current)</span></a>
+				</li>
+				<li class="nav-item"><a class="nav-link" href="employee.html" data-target="#theModal">Employees</a></li>
+			</ul>
+		</div>
+		<a class="navbar-brand navbar-right text-white">V1.0</a>
+	</nav>
+	<img src="img/myimage.png" alt="Helpdesk">
+	<p style="text-align:center;">V1.0</p>
+	<div class="modal fade text-center" data-toggle="modal" data-backdrop="static" id="theModal">
+		<div class="modal-dialog modal-lg">
+			<div class="modal-content">
+				<div class="modal-header d-block">
+					<button type="button" class="close float-right" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+					<div class="mx-4 my-4">
+						<div class="card">
+							<div class="card-header text-center">
+								Employee Information
+							</div>
+							<div class="card-body">
+								<div class="row ml-1">
+									<div class="col-3" style="font-weight:bold">Title:</div>
+									<div class="col-2 text-left" id="title"></div>
+									<div class="col-3 text-right" style="font-weight:bold">First:</div>
+									<div class="col-4 text-left" id="firstname"></div>
+								</div>
+								<div class="row ml-1">
+									<div class="col-3" style="font-weight:bold">Phone:</div>
+									<div class="col-8 text-left" id="phone"></div>
+								</div>
+								<div class="row ml-1">
+									<div class="col-3" style="font-weight:bold">Email:</div>
+									<div class="col-8 text-left" id="email"></div>
+								</div>
+								<div class="row ml-1">
+									<div class="col-3" style="font-weight:bold">Last:</div>
+									<div class="col-8">
+										<input type="text" placeholder="enter last name" id="TextBoxLastname" class="form-control my-2" />
+									</div>
+								</div>
+							</div>
+							<div class="card-footer text-center">
+								<input type="button" value="Find Employee" id="getbutton" />
+								<div id="status" class="text-left mt-3 mb-2"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="lib/jquery/dist/jquery.min.js"></script>
+	<script src="lib/jquery-validation/dist/jquery.validate.min.js"></script>
+	<script src="lib/bootstrap/dist/js/bootstrap.min.js"></script>
+	<script src="wwwroot/js/employeelookup.js"></script>
+
+</body>
+</html>
